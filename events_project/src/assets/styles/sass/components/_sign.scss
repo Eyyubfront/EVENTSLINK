@@ -1,0 +1,233 @@
+#sign{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    .sign__box{
+        border: 1px solid #FDD1D5;
+        border-radius: 12px;
+        padding: 35px;
+        background-color: #FDD1D5;
+        width: 89%;
+        height: 240px;
+    }
+    .sign__card{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .sign__left{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            .sign__top{
+                font-size: 20px;
+            }
+            .sign__bottom{
+                width: 45%;
+                color: #111111;
+                font-family: "Montserrat", sans-serif;
+            }
+            .sign__btn {
+              position: relative;
+              cursor: pointer;
+              overflow: hidden;
+              transition: color 0.5s;
+              z-index: 1;
+              background-color: #F84757; 
+              color: white; 
+              border: none;
+              border-radius: 5px;
+              padding: 10px 20px;
+              font-size: 1rem;
+            width: 150px;
+              &:hover {
+                color: #fff;
+                background-color: red;
+              }
+            
+              &:before {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                background: rgb(187, 7, 22);
+                height: 150px;
+                width: 200px;
+                border-radius: 50%;
+                top: 100%;
+                left: 50%;
+                transform: translate(-50%);
+                transition: all 0.7s;
+              }
+            
+              &:hover:before {
+                top: -50px;
+                left: 50%;
+                transform: translate(-50%);
+              }
+            }
+            
+              
+              
+              
+              
+        }
+    }
+}
+ @media (max-width: 768px) {
+  #sign{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    .sign__box{
+        border: 1px solid #FDD1D5;
+        border-radius: 12px;
+        padding: 35px;
+        background-color: #FDD1D5;
+        width: 89%;
+        height: 240px;
+    }
+    .sign__card{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .sign__left{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            .sign__top{
+                font-size: 20px;
+            }
+            .sign__bottom{
+                width: 45%;
+                color: #111111;
+                font-family: "Montserrat", sans-serif;
+            }
+            .sign__btn {
+              position: relative;
+              cursor: pointer;
+              overflow: hidden;
+              transition: color 0.5s;
+              z-index: 1;
+              background-color: #F84757; 
+              color: white; 
+              border: none;
+              border-radius: 5px;
+              padding: 10px 20px;
+              font-size: 1rem;
+            width: 150px;
+              &:hover {
+                color: #fff;
+                background-color: red; 
+              }
+            
+              &:before {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                background: rgb(187, 7, 22);
+                height: 150px;
+                width: 200px;
+                border-radius: 50%;
+                top: 100%;
+                left: 50%;
+                transform: translate(-50%);
+                transition: all 0.7s;
+              }
+            
+              &:hover:before {
+                top: -50px;
+                left: 50%;
+                transform: translate(-50%);
+              }
+            }
+            
+              
+              
+              
+              
+        }
+    }
+}
+ }
+@media (max-width: 576px) {
+  #sign{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    .sign__box{
+      border: 1px solid #FDD1D5;
+      border-radius: 12px;
+      padding: 35px;
+      background-color: #FDD1D5;
+      width: 58%;
+      height: 451px;
+    }
+    .sign__card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        .sign__left{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            .sign__top{
+                font-size: 20px;
+                .signeventlinks{
+                  width: 100%;
+                }
+            }
+            .sign__bottom{
+                width: 100%;
+                color: #111111;
+                font-family: "Montserrat", sans-serif;
+            }
+            .sign__btn {
+              position: relative;
+              cursor: pointer;
+              overflow: hidden;
+              transition: color 0.5s;
+              z-index: 1;
+              background-color: #F84757;
+              color: white;
+              border: none;
+              border-radius: 5px;
+              padding: 10px 20px;
+              font-size: 1rem;
+            width: 150px;
+              &:hover {
+                color: #fff;
+                background-color: red; 
+              }
+            
+              &:before {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                background: rgb(187, 7, 22);
+                height: 150px;
+                width: 200px;
+                border-radius: 50%;
+                top: 100%;
+                left: 50%;
+                transform: translate(-50%);
+                transition: all 0.7s;
+              }
+            
+              &:hover:before {
+                top: -50px;
+                left: 50%;
+                transform: translate(-50%);
+              }
+            }
+            
+              
+              
+              
+              
+        }
+        .sign__right{
+          width: 250px;
+        }
+    }
+}
+}

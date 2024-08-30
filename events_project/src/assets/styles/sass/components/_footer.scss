@@ -1,0 +1,91 @@
+#footer {
+    background-color: black;
+    color: white;
+    padding: 30px;
+    
+    .footer__container {
+        display: flex;
+        flex-direction: row !important;
+        align-items: center;
+        justify-content: space-between !important;
+        gap: 20px; 
+
+        .footer__name {
+            font-size: 25px;
+            font-family: "Jua", sans-serif;
+        }
+        
+        .footer__bottom {
+            display: flex;
+            flex-direction: column !important;
+            align-items: center;
+            gap: 40px;
+            
+            .footer__navlink {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 15px;
+                text-decoration: none !important;
+                cursor: pointer;
+                font-size: 18px;
+
+                .linkline {
+                    text-decoration: none;
+                    color: #FFF5F6;
+
+                    &:hover {
+                        color: gray;
+                    }
+                }
+            }
+
+            .footer__mail {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 3px;
+
+                .mailadres {
+                    font-family: "Inter", sans-serif;
+                }
+
+                .mail__icon {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        .footer__container {
+            flex-direction: column-reverse !important; 
+            align-items: center;
+            text-align: center;
+    
+            .footer__name {
+                order: 2; 
+                margin-top: 20px; 
+            }
+    
+            .footer__bottom {
+                order: 1;
+            }
+        }
+    }
+    @media (max-width: 576px) {
+        .footer__container {
+            flex-direction: column-reverse !important; 
+            align-items: center;
+            text-align: center;
+    
+            .footer__name {
+                order: 2; 
+                margin-top: 20px; 
+            }
+    
+            .footer__bottom {
+                order: 1; 
+            }
+        }
+    }
+}
