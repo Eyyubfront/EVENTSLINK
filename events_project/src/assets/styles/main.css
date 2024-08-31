@@ -800,7 +800,7 @@
 #footer .footer__container .footer__bottom .footer__mail {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: unset;
   gap: 3px;
 }
 #footer .footer__container .footer__bottom .footer__mail .mailadres {
@@ -986,10 +986,6 @@
 #popularevents .event-card .event-content .event-info .event-calendar .event-time {
   margin-left: 8px;
   font-weight: bold;
-}
-#popularevents .event-card .event-content .event-info .event-calendar::before {
-  content: "•";
-  margin: 0 8px;
 }
 #popularevents .event-card .event-content .event-info .event-check {
   margin-top: 8px;
