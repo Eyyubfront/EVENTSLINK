@@ -92,7 +92,19 @@
     #burgermenu {
       display: block;
     }
-  
+  .dropdown-menu {
+    display: flex;
+    flex-direction: row;
+    background: #000;
+    color: #fff;
+    position: absolute;
+    top: 302px;
+    border: 1px solid;
+    border-radius: 12px;
+    padding: 4px;
+    gap: 12px;
+    right: 111px;
+  }
     .menu-button {
       display: block;
     }

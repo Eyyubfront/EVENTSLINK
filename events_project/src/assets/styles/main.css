@@ -68,12 +68,16 @@
   margin-left: 8px;
 }
 #navbar .navbar__container .navbar__right .navbar__language .dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  color: #fff;
   position: absolute;
-  top: 100%;
-  left: 0;
-  background: black;
-  padding: 5px 0;
-  z-index: 99999;
+  top: 311px;
+  border: 1px solid;
+  border-radius: 12px;
+  padding: 10px;
+  gap: 12px;
 }
 #navbar .navbar__container .navbar__right .navbar__language .dropdown-menu p {
   margin: 0;
@@ -160,12 +164,16 @@
     margin-left: 8px;
   }
   #navbar .navbar__container .navbar__right .navbar__language .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    background: #000;
+    color: #fff;
     position: absolute;
-    top: 100%;
-    left: 0;
-    background: black;
-    padding: 5px 0;
-    z-index: 99999;
+    top: 311px;
+    border: 1px solid;
+    border-radius: 12px;
+    padding: 10px;
+    gap: 12px;
   }
   #navbar .navbar__container .navbar__right .navbar__language .dropdown-menu p {
     margin: 0;
@@ -266,12 +274,16 @@
     margin-left: 8px;
   }
   #navbar .navbar__container .navbar__right .navbar__language .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    background: #000;
+    color: #fff;
     position: absolute;
-    top: 100%;
-    left: 0;
-    background: black;
-    padding: 5px 0;
-    z-index: 99999;
+    top: 311px;
+    border: 1px solid;
+    border-radius: 12px;
+    padding: 10px;
+    gap: 12px;
   }
   #navbar .navbar__container .navbar__right .navbar__language .dropdown-menu p {
     margin: 0;
@@ -1469,6 +1481,19 @@
 @media (max-width: 576px) {
   #burgermenu {
     display: block;
+  }
+  .dropdown-menu {
+    display: flex;
+    flex-direction: row;
+    background: #000;
+    color: #fff;
+    position: absolute;
+    top: 302px;
+    border: 1px solid;
+    border-radius: 12px;
+    padding: 4px;
+    gap: 12px;
+    right: 111px;
   }
   .menu-button {
     display: block;
