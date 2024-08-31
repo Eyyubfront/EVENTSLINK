@@ -20,28 +20,26 @@ const Header = () => {
           <div className="navbar__left">
             <h2>EVENTS<span className='linksname'>LINK</span></h2>
            <div className="navbar__navlink">
-            <Link className='linkline' to="/events">
-           <p className='navlink'>Events</p>
+            <Link sx={{textDecoration:"none"}} className='linkline' to="/events">
+              <p className='navlink'>Events</p>
             </Link>
-            <Link className='linkline' to="/aboutus">
-           <p className='navlink'>About us</p>
+            <Link sx={{textDecoration:"none"}} className='linkline' to="/aboutus">
+              <p className='navlink'>About us</p>
             </Link>
-            <Link className='linkline' to="/contactus">
-            <p className='navlink'>Contact us</p>
+            <Link sx={{textDecoration:"none"}} className='linkline' to="/contactus">
+              <p className='navlink'>Contact us</p>
             </Link>     
            </div>
           </div>
           <div className="navbar__right">
             <div className="navbar__language">
               <button onClick={toggleDropdown} className="dropdown-btn">
-                EN <BiChevronDown />
+                {isDropdownOpen ? 'AZ' : 'EN'} <BiChevronDown />
               </button>
-              {isDropdownOpen && (
-                <div className="dropdown-menu">
-                  <p>EN</p>
-                  <p>AZ</p>
-                </div>
-              )}
+              <div className={`dropdown-menu ${isDropdownOpen ? 'open' : ''}`}>
+                <p>EN</p>
+                <p>AZ</p>
+              </div>
             </div>
             <div className="navbar__icons">
               <CiSearch />
