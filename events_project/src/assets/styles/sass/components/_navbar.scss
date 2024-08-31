@@ -128,14 +128,22 @@ z-index: 99999;
         align-items: center;
         gap: 10px;
         font-size: 17px;
-        .linkline{
+        .linkline {
             text-decoration: none;
             color: #FFF5F6;
-            &:hover{
-                padding-bottom: 2px;
-                border-bottom: 2px solid red;
+            position: relative; 
+          
+            &:hover::after {
+              content: '';
+              position: absolute;
+              bottom: -2px; 
+              left: 0;
+              width: 100%; 
+              height: 2px;
+              background-color: red; 
             }
-        }
+          }
+          
         .navlink {
             font-family: "Poppins", sans-serif;
             font-weight: 400;
@@ -193,8 +201,17 @@ z-index: 99999;
                 }
             }
         }
+       
     }
 }
+
+
+
+
+
+
+
+
 @media (max-width: 576px) {
     #navbar {
         padding: 20px;

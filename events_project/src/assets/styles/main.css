@@ -122,10 +122,16 @@
   #navbar .navbar__container .navbar__left .navbar__navlink .linkline {
     text-decoration: none;
     color: #FFF5F6;
+    position: relative;
   }
-  #navbar .navbar__container .navbar__left .navbar__navlink .linkline:hover {
-    padding-bottom: 2px;
-    border-bottom: 2px solid red;
+  #navbar .navbar__container .navbar__left .navbar__navlink .linkline:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: red;
   }
   #navbar .navbar__container .navbar__left .navbar__navlink .navlink {
     font-family: "Poppins", sans-serif;
@@ -284,7 +290,7 @@
 }
 #findevents {
   position: relative;
-  background-image: url("../../../images/celebrate.png"); /* Webpack ile `~` kullanarak src'den doğru yolu kullanabilirsiniz */
+  background-image: url("../../../images/celebrate.png");
   background-size: cover;
   background-position: center;
   height: 600px;
@@ -297,12 +303,12 @@
   text-align: center;
   top: 63%;
   padding: 20px;
-  color: white; /* Metin rengi arka plana uyumlu olması için */
+  color: white;
 }
 #findevents .find__text h2 {
   font-size: 38px;
   font-family: "Poppins", sans-serif;
-  margin-bottom: 10px; /* Başlık ile altındaki paragraf arasındaki boşluk */
+  margin-bottom: 10px;
 }
 #findevents .find__text .finds__abouts {
   display: flex;
@@ -319,8 +325,8 @@
   overflow: hidden;
   transition: color 0.5s;
   z-index: 1;
-  background-color: #F84757; /* Varsayılan arka plan rengi */
-  color: white; /* Varsayılan metin rengi */
+  background-color: #F84757;
+  color: white;
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
@@ -329,7 +335,7 @@
 }
 #findevents .find__text .find__button:hover {
   color: #fff;
-  background-color: red; /* Hover yapıldığında arka plan rengi değişimi */
+  background-color: red;
 }
 #findevents .find__text .find__button:before {
   content: "";
@@ -352,90 +358,41 @@
 
 @media (max-width: 576px) {
   #findevents {
-    position: relative;
-    background-image: url("../../../images/celebrate.png"); /* Webpack ile `~` kullanarak src'den doğru yolu kullanabilirsiniz */
-    background-size: cover;
-    background-position: center;
     height: 650px;
   }
   #findevents .find__text {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    position: absolute;
-    text-align: center;
     top: 63%;
-    padding: 20px;
-    color: white; /* Metin rengi arka plana uyumlu olması için */
   }
   #findevents .find__text h2 {
     font-size: 20px;
-    font-family: "Poppins", sans-serif;
-    margin-bottom: 10px; /* Başlık ile altındaki paragraf arasındaki boşluk */
   }
   #findevents .find__text .finds__abouts {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 2px;
   }
   #findevents .find__text .finds__abouts p {
     font-family: "Montserrat", sans-serif;
   }
   #findevents .find__text .find__button {
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
-    transition: color 0.5s;
-    z-index: 1;
-    background-color: #F84757; /* Varsayılan arka plan rengi */
-    color: white; /* Varsayılan metin rengi */
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
     font-size: 1rem;
-    margin-top: 20px;
-  }
-  #findevents .find__text .find__button:hover {
-    color: #fff;
-    background-color: red; /* Hover yapıldığında arka plan rengi değişimi */
-  }
-  #findevents .find__text .find__button:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    background: rgb(187, 7, 22);
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%);
-    transition: all 0.8s;
-  }
-  #findevents .find__text .find__button:hover:before {
-    top: -50px;
-    left: 50%;
-    transform: translate(-50%);
   }
 }
 #activities {
   display: flex;
   flex-direction: column;
-  align-items: center; /* İçeriği yatay olarak ortalar */
+  align-items: center;
   margin-top: 30px;
-  padding: 0 20px; /* Sayfanın kenarlarından boşluk bırakır */
+  padding: 0 20px;
   background-size: cover;
 }
 
 .activities__cards {
   display: flex;
-  flex-direction: row; /* Kartları yatayda sıralar */
-  /* Kartların taşmasını sağlar ve birden fazla satıra yayılmalarına izin verir */
-  justify-content: center; /* Kartları yatay olarak ortalar */
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 1200px; /* Kartların çok geniş ekranlarda yayılmasını engeller */
+  max-width: 1200px;
 }
 
 .activitesallcard {
@@ -444,8 +401,8 @@
   align-items: center;
   position: relative;
   transition: transform 0.3s ease;
-  flex: 1 1 calc(33.333% - 10px); /* Kartları yatayda 3'erli gruplayarak gösterir */
-  box-sizing: border-box; /* Padding ve border'ı genişliğe dahil eder */
+  flex: 1 1 calc(33.333% - 10px);
+  box-sizing: border-box;
 }
 
 .activitesallcard:hover .activitesimgcard {
@@ -489,35 +446,42 @@
   transition: filter 0.3s ease;
 }
 
-/* Mobil Görünüm İçin Media Query */
+@media (max-width: 1200px) {
+  .activities__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    max-width: none;
+  }
+  .activitesallcard {
+    width: 100%;
+    max-width: none;
+  }
+  .activitesimgcard {
+    width: 90px !important;
+  }
+}
 @media (max-width: 768px) {
   .activities__cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 sütunlu grid düzeni */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 10px;
-    max-width: none; /* Mobilde genişlik kısıtlamasını kaldırır */
+    max-width: none;
   }
   .activitesallcard {
-    width: 100%; /* Grid hücresinin tamamını kaplar */
-    max-width: none; /* Maksimum genişlik kısıtlamasını kaldırır */
+    width: 100%;
+    max-width: none;
   }
   .activitesimgcard {
-    width: 90px !important; /* Küçük ekranlarda img kart genişliği */
+    width: 90px !important;
   }
 }
 @media (max-width: 576px) {
   .activities__cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 sütunlu grid düzeni */
-    gap: 10px;
-    max-width: none; /* Mobilde genişlik kısıtlamasını kaldırır */
-  }
-  .activitesallcard {
-    width: 100%; /* Grid hücresinin tamamını kaplar */
-    max-width: none; /* Maksimum genişlik kısıtlamasını kaldırır */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
   .activitesimgcard {
-    width: 90px !important; /* Küçük ekranlarda img kart genişliği */
+    width: 73px !important;
   }
 }
 #destination {
@@ -555,7 +519,6 @@
 
 @media (max-width: 768px) {
   #destination {
-    display: flex;
     text-align: center;
     flex-direction: column !important;
     align-items: initial;
@@ -590,9 +553,78 @@
     font-family: "Poppins", sans-serif;
   }
 }
+@media (max-width: 1000px) {
+  #destination {
+    text-align: center;
+    flex-direction: column !important;
+    align-items: initial;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  #destination h2 {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    margin-left: 40px;
+  }
+  #destination .destination__cards {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    gap: 10px;
+  }
+  #destination .destination__card {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    gap: 6px;
+  }
+  #destination .destination__card .destinationimg {
+    width: 200px;
+    border-radius: 8px;
+  }
+  #destination .destination__card .destinaitonname {
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+  }
+}
+@media (max-width: 768px) {
+  #destination {
+    text-align: center;
+    flex-direction: column !important;
+    align-items: initial;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  #destination h2 {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    margin-left: 40px;
+  }
+  #destination .destination__cards {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    gap: 10px;
+  }
+  #destination .destination__card {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    gap: 6px;
+  }
+  #destination .destination__card .destinationimg {
+    width: 200px;
+    border-radius: 8px;
+  }
+  #destination .destination__card .destinaitonname {
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+  }
+}
 @media (max-width: 576px) {
   #destination {
-    display: flex;
     text-align: center;
     flex-direction: column !important;
     align-items: initial;
@@ -663,8 +695,8 @@
   overflow: hidden;
   transition: color 0.5s;
   z-index: 1;
-  background-color: #F84757; /* Varsayılan arka plan rengi */
-  color: white; /* Varsayılan metin rengi */
+  background-color: #F84757;
+  color: white;
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
@@ -673,7 +705,7 @@
 }
 #sign .sign__card .sign__left .sign__btn:hover {
   color: #fff;
-  background-color: red; /* Hover yapıldığında arka plan rengi değişimi */
+  background-color: red;
 }
 #sign .sign__card .sign__left .sign__btn:before {
   content: "";
@@ -732,8 +764,8 @@
     overflow: hidden;
     transition: color 0.5s;
     z-index: 1;
-    background-color: #F84757; /* Varsayılan arka plan rengi */
-    color: white; /* Varsayılan metin rengi */
+    background-color: #F84757;
+    color: white;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -742,7 +774,7 @@
   }
   #sign .sign__card .sign__left .sign__btn:hover {
     color: #fff;
-    background-color: red; /* Hover yapıldığında arka plan rengi değişimi */
+    background-color: red;
   }
   #sign .sign__card .sign__left .sign__btn:before {
     content: "";
@@ -775,7 +807,7 @@
     padding: 35px;
     background-color: #FDD1D5;
     width: 58%;
-    height: 451px;
+    height: 491px;
   }
   #sign .sign__card {
     display: flex;
@@ -805,8 +837,8 @@
     overflow: hidden;
     transition: color 0.5s;
     z-index: 1;
-    background-color: #F84757; /* Varsayılan arka plan rengi */
-    color: white; /* Varsayılan metin rengi */
+    background-color: #F84757;
+    color: white;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -815,7 +847,7 @@
   }
   #sign .sign__card .sign__left .sign__btn:hover {
     color: #fff;
-    background-color: red; /* Hover yapıldığında arka plan rengi değişimi */
+    background-color: red;
   }
   #sign .sign__card .sign__left .sign__btn:before {
     content: "";
@@ -849,7 +881,7 @@
   flex-direction: row !important;
   align-items: center;
   justify-content: space-between !important;
-  gap: 20px; /* Adjust spacing if needed */
+  gap: 20px;
 }
 #footer .footer__container .footer__name {
   font-size: 25px;
@@ -891,30 +923,30 @@
 }
 @media (max-width: 768px) {
   #footer .footer__container {
-    flex-direction: column-reverse !important; /* Stack items vertically */
+    flex-direction: column-reverse !important;
     align-items: center;
     text-align: center;
   }
   #footer .footer__container .footer__name {
-    order: 2; /* Place footer__name below footer__bottom */
-    margin-top: 20px; /* Optional: Add spacing if needed */
+    order: 2;
+    margin-top: 20px;
   }
   #footer .footer__container .footer__bottom {
-    order: 1; /* Place footer__bottom above footer__name */
+    order: 1;
   }
 }
 @media (max-width: 576px) {
   #footer .footer__container {
-    flex-direction: column-reverse !important; /* Stack items vertically */
+    flex-direction: column-reverse !important;
     align-items: center;
     text-align: center;
   }
   #footer .footer__container .footer__name {
-    order: 2; /* Place footer__name below footer__bottom */
-    margin-top: 20px; /* Optional: Add spacing if needed */
+    order: 2;
+    margin-top: 20px;
   }
   #footer .footer__container .footer__bottom {
-    order: 1; /* Place footer__bottom above footer__name */
+    order: 1;
   }
 }
 
@@ -1344,4 +1376,101 @@
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+}
+
+#burgermenu {
+  display: none; /* Hide by default */
+}
+
+.menu-button {
+  display: none; /* Hide by default */
+}
+
+.dialog {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  color: white;
+  width: 100%;
+  height: 100vh;
+  display: none; /* Hide by default */
+}
+
+.dialog.open {
+  display: block; /* Show when open */
+}
+
+.burgermenubox {
+  background: black;
+  color: white;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  font-size: 28px;
+}
+
+.burger__navlink {
+  margin: 0;
+}
+
+.burgerlink {
+  text-decoration: none;
+  color: white;
+}
+
+.navlink {
+  font-size: 24px;
+}
+
+.burger__right {
+  margin-top: 20px;
+}
+
+.navbar__language {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dropdown-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  background: black;
+  color: white;
+  position: absolute;
+  top: 30px;
+}
+
+.burger__icons {
+  display: flex;
+  gap: 15px;
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  #burgermenu {
+    display: none;
+  }
+  .menu-button {
+    display: block;
+  }
+}
+@media (max-width: 576px) {
+  #burgermenu {
+    display: block;
+  }
+  .menu-button {
+    display: block;
+  }
 }

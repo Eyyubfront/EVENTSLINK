@@ -39,11 +39,13 @@
     height: 202em !important;
   }
 
+
 }
 @media (max-width: 576px) {
   .Container {
     max-width: 100%;
   }
+ 
   .boysbacgcolor{
     background-image: none !important;
     margin-left: 0px !important;
