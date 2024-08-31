@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BiChevronDown } from "react-icons/bi"; 
-import BurgerMenu from '../Burgermenu';
+import BurgerMenu from '../../Components/Burgermenu/index';
 import { Link } from '@mui/material';
 import human from "../../assets/images/iconsphoto/human.png"
 import bag from "../../assets/images/iconsphoto/bag.png"
