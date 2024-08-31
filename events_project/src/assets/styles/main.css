@@ -841,9 +841,9 @@
 #popularevents {
   position: relative;
   width: 100%;
+  /* Responsive styles */
 }
-
-.popularevents__top {
+#popularevents .popularevents__top {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -851,31 +851,28 @@
   padding: 10px;
   margin-left: 50px;
 }
-.popularevents__top .popularevents__name {
+#popularevents .popularevents__top .popularevents__name {
   font-family: "Poppins", sans-serif;
 }
-.popularevents__top .populareventsall {
+#popularevents .popularevents__top .populareventsall {
   cursor: pointer;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   position: absolute;
   right: 55px;
 }
-.popularevents__top .populareventsall:hover {
+#popularevents .popularevents__top .populareventsall:hover {
   border-bottom: 1px solid black;
 }
-
-.swiper {
+#popularevents .swiper {
   width: 100%;
   padding: 20px 0;
 }
-
-.swiper-wrapper {
+#popularevents .swiper .swiper-wrapper {
   display: flex;
   align-items: center;
 }
-
-.swiper-slide {
+#popularevents .swiper .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -884,12 +881,10 @@
   margin-right: 10px;
   box-sizing: border-box;
 }
-
-.swiper-slide:last-child {
+#popularevents .swiper .swiper-slide:last-child {
   margin-right: 0;
 }
-
-.event-card {
+#popularevents .event-card {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -899,39 +894,35 @@
   overflow: hidden;
   transition: box-shadow 0.3s ease;
 }
-.event-card:hover .event-title {
+#popularevents .event-card:hover .event-title {
   border-bottom: 1px solid gray;
 }
-.event-card:hover .event-content {
+#popularevents .event-card:hover .event-content {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   background-color: white;
   border-radius: 12px;
 }
-.event-card:hover .eventimage {
+#popularevents .event-card:hover .eventimage {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-.event-content {
+#popularevents .event-card .event-content {
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   position: relative;
 }
-
-.event-image-wrapper {
+#popularevents .event-card .event-content .event-image-wrapper {
   position: relative;
   width: 100%;
 }
-
-.eventimage {
+#popularevents .event-card .event-content .event-image-wrapper .eventimage {
   width: 236px;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
   transition: border 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
-
-.event-heart-icon {
+#popularevents .event-card .event-content .event-heart-icon {
   position: absolute;
   top: 8px;
   right: 18px;
@@ -942,25 +933,22 @@
   padding: 6px;
   font-size: 20px;
 }
-
-.event-info {
+#popularevents .event-card .event-content .event-info {
   margin-top: 12px;
   display: flex;
   flex-direction: column;
   padding: 6px;
   align-items: flex-start;
 }
-
-.event-title {
+#popularevents .event-card .event-content .event-info .event-title {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 8px;
   font-family: "Poppins", sans-serif;
 }
-
-.event-check,
-.event-many,
-.event-calendar {
+#popularevents .event-card .event-content .event-info .event-check,
+#popularevents .event-card .event-content .event-info .event-many,
+#popularevents .event-card .event-content .event-info .event-calendar {
   display: flex;
   align-items: center;
   margin: 4px 0;
@@ -969,53 +957,45 @@
   flex-direction: row;
   color: #666;
 }
-.event-check .checksicon,
-.event-many .checksicon,
-.event-calendar .checksicon {
+#popularevents .event-card .event-content .event-info .event-check .checksicon,
+#popularevents .event-card .event-content .event-info .event-many .checksicon,
+#popularevents .event-card .event-content .event-info .event-calendar .checksicon {
   border: 1px solid;
   border-radius: 12px;
   padding: 2px;
 }
-.event-check img,
-.event-many img,
-.event-calendar img {
+#popularevents .event-card .event-content .event-info .event-check img,
+#popularevents .event-card .event-content .event-info .event-many img,
+#popularevents .event-card .event-content .event-info .event-calendar img {
   width: 20px;
   height: auto;
   margin-right: 8px;
 }
-
-.event-many {
+#popularevents .event-card .event-content .event-info .event-many {
   color: red;
   font-size: 17px;
   opacity: 0.7;
   font-family: "Poppins", sans-serif;
 }
-
-.event-calendar {
+#popularevents .event-card .event-content .event-info .event-calendar {
   margin-top: 8px;
   font-size: 14px;
   display: flex;
   align-items: center;
 }
-.event-calendar .event-time {
+#popularevents .event-card .event-content .event-info .event-calendar .event-time {
   margin-left: 8px;
   font-weight: bold;
 }
-.event-calendar .event-calendar::before {
+#popularevents .event-card .event-content .event-info .event-calendar::before {
   content: "•";
   margin: 0 8px;
 }
-
-.event-check {
+#popularevents .event-card .event-content .event-info .event-check {
   margin-top: 8px;
 }
-
-.event-many {
-  margin: 8px 0;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
+#popularevents .swiper-button-next,
+#popularevents .swiper-button-prev {
   color: black;
   width: 40px;
   height: 40px;
@@ -1028,12 +1008,12 @@
   z-index: 20;
   visibility: hidden;
 }
-.swiper-button-next::after,
-.swiper-button-prev::after {
+#popularevents .swiper-button-next::after,
+#popularevents .swiper-button-prev::after {
   content: "";
 }
-
-.swiper-button-next {
+#popularevents .swiper-button-next.swiper-button-next,
+#popularevents .swiper-button-prev.swiper-button-next {
   right: 5px;
   border: 6px solid black;
   padding: 2px;
@@ -1045,13 +1025,14 @@
   justify-content: center;
   box-sizing: border-box;
 }
-.swiper-button-next:hover {
+#popularevents .swiper-button-next.swiper-button-next:hover,
+#popularevents .swiper-button-prev.swiper-button-next:hover {
   border: 6px solid red;
   color: red;
   opacity: 0.5;
 }
-
-.swiper-button-prev {
+#popularevents .swiper-button-next.swiper-button-prev,
+#popularevents .swiper-button-prev.swiper-button-prev {
   left: 5px;
   border: 1px solid black;
   padding: 8px;
@@ -1062,6 +1043,66 @@
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  #popularevents .swiper-button-next,
+  #popularevents .swiper-button-prev {
+    visibility: visible;
+  }
+  #popularevents .swiper-button-next {
+    top: 50%;
+    right: 5px;
+    border: 6px solid black;
+    padding: 2px;
+    border-radius: 50%;
+    height: 35px;
+    width: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  #popularevents .swiper-button-next:hover {
+    border: 6px solid red;
+    color: red;
+    opacity: 0.5;
+  }
+  #popularevents .swiper-button-prev {
+    top: 50%;
+    left: 5px;
+    border: 1px solid black;
+    padding: 8px;
+    border-radius: 50%;
+    height: 35px;
+    width: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+}
+@media (max-width: 576px) {
+  #popularevents .swiper-button-next {
+    right: 5px;
+  }
+  #popularevents .swiper-button-prev {
+    left: 5px;
+  }
+  #popularevents .populareventsall {
+    cursor: pointer;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    position: absolute;
+    right: 37px !important;
+  }
+  #popularevents .popularevents__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+    margin-left: 30px;
+  }
 }
 
 #upcoming {
