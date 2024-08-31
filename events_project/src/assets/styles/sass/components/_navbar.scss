@@ -123,6 +123,10 @@
         flex-direction: row;
         gap: 15px;
         cursor: pointer;
+        .icon__btn{
+          background-color: black;
+          cursor: pointer;
+        }
         .iconsphoto{
           width: 15px;
         }
@@ -131,7 +135,6 @@
   }
 }
 
-// Mobile View
 @media (max-width: 768px) {
   .navbar__navlink {
     display: none !important;

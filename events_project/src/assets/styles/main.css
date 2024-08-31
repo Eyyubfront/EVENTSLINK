@@ -111,6 +111,10 @@
   gap: 15px;
   cursor: pointer;
 }
+#navbar .navbar__container .navbar__right .navbar__icons .icon__btn {
+  background-color: black;
+  cursor: pointer;
+}
 #navbar .navbar__container .navbar__right .navbar__icons .iconsphoto {
   width: 15px;
 }
@@ -1394,6 +1398,10 @@
   gap: 15px;
   font-size: 24px;
   margin-top: 10px;
+}
+#burgermenu .dialog .burgermenubox .burger__right .burger__icons .burger__icons {
+  background-color: black;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {

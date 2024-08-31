@@ -47,9 +47,15 @@ const Header = () => {
               </div>
             </div>
             <div className="navbar__icons">
+            <button className='icon__btn'>
             <img className='iconsphoto' src={search} alt="" />
+            </button>
+            <button className='icon__btn'>
             <img className='iconsphoto' src={human} alt="" />
+            </button>
+            <button className='icon__btn'>
             <img className='iconsphoto' src={bag} alt="" />
+            </button>
             </div>
           </div>
           <BurgerMenu/>
