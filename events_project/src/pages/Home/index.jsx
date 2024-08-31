@@ -5,7 +5,7 @@ import Activities from '../../Components/Activities/activities';
 import Destinations from '../../Components/Destinations/destinations';
 import Sign from '../../Components/Sign/sign';
 import Popularevents from '../../Components/Popularevents/popularevents';
-import Upcoming from '../../Components/Upcoming/Upcoming ';
+import Upcoming from '../../Components/Upcoming/upcoming ';
 const Home = () => {
   return (
     <>
