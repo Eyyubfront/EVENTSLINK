@@ -1,19 +1,24 @@
-import { Box, IconButton, Stack } from "@mui/material";
+import { IconButton, Stack } from "@mui/material";
 import { Close } from "@mui/icons-material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 import { Link } from '@mui/material';
-import { CiSearch } from "react-icons/ci";
-import { FaShoppingBag } from "react-icons/fa";
-import { IoMdPerson } from "react-icons/io";
 import { BiChevronDown } from "react-icons/bi";
-
+import human from "../../assets/images/iconsphoto/human.png"
+import bag from "../../assets/images/iconsphoto/bag.png"
+import search from "../../assets/images/iconsphoto/search.png"
 const BurgerMenu = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [open, setOpen] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState('EN');
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const handleLanguageChange = (language) => {
+    setSelectedLanguage(language);
+    setIsDropdownOpen(false);
   };
 
   return (
@@ -40,32 +45,32 @@ const BurgerMenu = () => {
 
             <Stack sx={{ marginTop: "20%" }} alignItems="center" flexDirection="column" gap="30px" textAlign="center">
               <div className="burger__navlink">
-                <Link className='burgerlink' to="/events">
+                <Link sx={{textDecoration:"none"}} className='burgerlink' to="/events">
                   <p className='navlink'>Events</p>
                 </Link>
-                <Link className='burgerlink' to="/aboutus">
+                <Link sx={{textDecoration:"none"}} className='burgerlink' to="/aboutus">
                   <p className='navlink'>About Us</p>
                 </Link>
-                <Link className='burgerlink' to="/contactus">
+                <Link sx={{textDecoration:"none"}} className='burgerlink' to="/contactus">
                   <p className='navlink'>Contact Us</p>
                 </Link>
               </div>
               <div className="burger__right">
                 <div className="navbar__language">
                   <button onClick={toggleDropdown} className="dropdown-btn">
-                    EN <BiChevronDown />
+                    {selectedLanguage} <BiChevronDown />
                   </button>
                   {isDropdownOpen && (
                     <div className="dropdown-menu">
-                      <p>EN</p>
-                      <p>AZ</p>
+                      <p onClick={() => handleLanguageChange('EN')}>EN</p>
+                      <p onClick={() => handleLanguageChange('AZ')}>AZ</p>
                     </div>
                   )}
                 </div>
                 <div className="burger__icons">
-                  <CiSearch />
-                  <IoMdPerson />
-                  <FaShoppingBag />
+                <img className='iconsphoto' src={search} alt="" />
+            <img className='iconsphoto' src={human} alt="" />
+            <img className='iconsphoto' src={bag} alt="" />
                 </div>
               </div>
             </Stack>

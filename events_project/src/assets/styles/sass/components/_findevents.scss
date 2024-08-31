@@ -74,12 +74,40 @@
   }
 }
 
+@media (max-width: 768px) {
+  #findevents {
+    height: 650px;
+
+    .find__text {
+      align-items: center !important;
+      top: 73%;
+
+      h2 {
+        font-size: 25px;
+      }
+
+      .finds__abouts {
+        align-items: center;
+
+        p {
+          font-family: "Montserrat", sans-serif;
+        }
+      }
+
+      .find__button {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+
 @media (max-width: 576px) {
   #findevents {
     height: 650px;
 
     .find__text {
-      align-items: center;
+      align-items: center !important;
       top: 63%;
 
       h2 {

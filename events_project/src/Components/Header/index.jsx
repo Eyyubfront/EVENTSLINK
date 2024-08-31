@@ -1,16 +1,21 @@
 import React, { useState } from 'react';
-import { CiSearch } from "react-icons/ci";
-import { FaShoppingBag } from "react-icons/fa";
-import { IoMdPerson } from "react-icons/io";
 import { BiChevronDown } from "react-icons/bi"; 
 import BurgerMenu from '../Burgermenu';
 import { Link } from '@mui/material';
-
+import human from "../../assets/images/iconsphoto/human.png"
+import bag from "../../assets/images/iconsphoto/bag.png"
+import search from "../../assets/images/iconsphoto/search.png"
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState('EN');
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const handleLanguageChange = (language) => {
+    setSelectedLanguage(language);
+    setIsDropdownOpen(false);
   };
 
   return (
@@ -34,17 +39,17 @@ const Header = () => {
           <div className="navbar__right">
             <div className="navbar__language">
               <button onClick={toggleDropdown} className="dropdown-btn">
-                {isDropdownOpen ? 'AZ' : 'EN'} <BiChevronDown />
+                {selectedLanguage} <BiChevronDown />
               </button>
               <div className={`dropdown-menu ${isDropdownOpen ? 'open' : ''}`}>
-                <p>EN</p>
-                <p>AZ</p>
+                <p onClick={() => handleLanguageChange('EN')}>EN</p>
+                <p onClick={() => handleLanguageChange('AZ')}>AZ</p>
               </div>
             </div>
             <div className="navbar__icons">
-              <CiSearch />
-              <IoMdPerson />
-              <FaShoppingBag />
+            <img className='iconsphoto' src={search} alt="" />
+            <img className='iconsphoto' src={human} alt="" />
+            <img className='iconsphoto' src={bag} alt="" />
             </div>
           </div>
           <BurgerMenu/>
