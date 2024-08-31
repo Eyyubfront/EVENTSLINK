@@ -47,7 +47,7 @@
             .footer__mail {
                 display: flex;
                 flex-direction: row;
-                align-items: center;
+                align-items: unset;
                 gap: 3px;
 
                 .mailadres {
